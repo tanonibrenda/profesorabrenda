@@ -19,22 +19,22 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-md-8 col-lg-7">
 
-                    <form class="contact-form" action="https://formsubmit.co/brendayohenatanoni@gmail.com" method="POST">
+                    <form class="contact-form" action="https://formsubmit.co/brendayohenatanoni@gmail.com" method="POST" enctype="multipart/form-data">
                         <div class="form-row">
                             <div class="col form-group">
                                 <label for="name">Nombre y Apellido</label>
                                 <input type="text" id="name" class="form-control" placeholder="Juan Perez" required aria-required="true" name="name">
                             </div>
                             <div class="col form-group">
-                                <label for="name">Colegio</label>
+                                <label for="school">Colegio</label>
                                 <input type="text" id="school" class="form-control" placeholder="Escuela N°1" required aria-required="true" name="school">
                             </div>
                             <div class="col form-group">
-                                <label for="name">Curso</label>
+                                <label for="course">Curso</label>
                                 <input type="text" id="course" class="form-control" placeholder="2° 3°" required aria-required="true" name="course">
                             </div>
                             <div class="col form-group">
-                                <label for="name">Materia</label>
+                                <label for="materia">Materia</label>
                                 <input type="text" id="materia" class="form-control" placeholder="Biología" required aria-required="true" name="materia">
                             </div>
                             <div class="col form-group">
@@ -47,11 +47,57 @@
                             <textarea id="message" cols="30" rows="5" class="form-control" placeholder="Escribe tu mensaje aquí" required aria-required="true" name="mensaje"></textarea>
                         </div>
                         <div class="form-group">
+                            <label for="file">Adjuntar Archivo</label>
+                            <input type="file" id="file" class="form-control" name="file" required>
+                        </div>
+                        <div class="form-group">
                             <input type="submit" class="btn btn-primary btn-block" value="Enviar Mensaje">
                         </div>
                     </form>
                     
-                    </form>
+                    <!-- Script para arrastrar y soltar archivos -->
+                    <script>
+                        const fileInput = document.getElementById('file');
+                        const dropArea = document.querySelector('.form-group');
+                    
+                        // Evitar el comportamiento predeterminado del navegador
+                        ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+                            dropArea.addEventListener(eventName, preventDefaults, false)
+                            document.body.addEventListener(eventName, preventDefaults, false)
+                        });
+                    
+                        function preventDefaults (e) {
+                            e.preventDefault()
+                            e.stopPropagation()
+                        }
+                    
+                        // Resaltar el área de arrastre cuando el archivo esté siendo arrastrado
+                        ['dragenter', 'dragover'].forEach(eventName => {
+                            dropArea.addEventListener(eventName, () => dropArea.classList.add('highlight'), false)
+                        });
+                    
+                        ['dragleave', 'drop'].forEach(eventName => {
+                            dropArea.addEventListener(eventName, () => dropArea.classList.remove('highlight'), false)
+                        });
+                    
+                        // Manejar los archivos arrastrados
+                        dropArea.addEventListener('drop', (e) => {
+                            let dt = e.dataTransfer
+                            let files = dt.files
+                    
+                            fileInput.files = files
+                        });
+                    </script>
+                    
+                    <!-- CSS opcional para estilo de área de arrastre -->
+                    <style>
+                        .form-group.highlight {
+                            border: 2px dashed #ccc;
+                        }
+                    </style>
+                    
+                    
+                    
                 </div>
                 
             </div>
