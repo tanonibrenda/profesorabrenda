@@ -81,10 +81,15 @@
     </div>
 
     <div class="video-container m-4 text-center" aria-label="Enlace a video de YouTube">
+        <p>Video</p>
         <img src="https://img.youtube.com/vi/bm2SRmi37Ro/hqdefault.jpg" alt="Haz clic para reproducir el video" onclick="loadVideo()">
         <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
-
+    <div class="download-button m-4">
+        <a href="../../audio/comunicacion_sist.mp3" download>
+            <img src="../../img/volumen.png" alt="Descargar Audio" style="width: 35px;">
+        </a>
+    </div>
     <script>
         function loadVideo() {
             var videoContainer = document.querySelector('.video-container');

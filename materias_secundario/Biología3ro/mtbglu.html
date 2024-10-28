@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Metabolismo de la Glucosa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="../../style.css">
     <script>
         function showVideo() {
             document.getElementById('video-container').style.display = 'block';
@@ -13,16 +13,41 @@
     </script>
 </head>
 <body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
-    <header><div id="header-placeholder" role="banner"></div></header>
+    <header id="home" class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html"><img src="../../img/gen.gif" id="gen"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Página Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../trucos.html">Trucos de Estudio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../biologia.html">Biología</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
           
         <main class="main-content container m-2">
             <h1>Metabolismo de la Glucosa y la Insulina</h1>
             <p>El metabolismo de la glucosa es un proceso esencial para proporcionar energía a las células del cuerpo. La glucosa es un tipo de azúcar que obtenemos de los alimentos y que nuestras células utilizan como fuente principal de energía.</p>
-           <div> <img src="./img/biología/glucosa.jpeg" alt="formula química de la glucosa"></div>
+           <div> <img src="../../img/biología/glucosa.jpeg" alt="formula química de la glucosa"></div>
             <h2>Insulina: Mecanismo de Comunicación Celular</h2>
             <p>La insulina es una hormona producida por el páncreas que juega un papel crucial en la regulación de los niveles de glucosa en la sangre. Cuando comemos, los niveles de glucosa en la sangre aumentan, lo que estimula al páncreas a liberar insulina.</p>
             <p>La insulina actúa como un "mensajero" que comunica a las células que deben absorber la glucosa de la sangre para utilizarla como energía o almacenarla para su uso futuro.</p>
-            <div><img src="./img/biología/insulina.jpeg" alt="funciones de la insulina"></div>
+            <div><img src="../../img/biología/insulina.jpeg" alt="funciones de la insulina"></div>
             
             <h2>Respuesta al Medio</h2>
             <p>El cuerpo responde a los cambios en los niveles de glucosa 🍧en la sangre mediante la liberación de insulina. Si los niveles de glucosa son altos, se libera más insulina para ayudar a reducirlos. Si los niveles son bajos, se libera menos insulina y comienza a secretar glucagon. El glucagon es la hormana que estimula la liberación de glucosa almacenada en el hígado, para garantizar el aporte continuo de glucosa. Sobre todo para las neuronas que no son las más sensibles a la falta de glucosa.</p>
@@ -57,7 +82,11 @@
     <div id="video-container" class="video-container">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/rarQkRgQMsc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Video de YouTube"></iframe>
     </div>
-
+    <div class="download-button m-4">
+        <a href="../../audio/mtb_glu.mp3" download>
+            <img src="../../img/volumen.png" alt="Descargar Audio" style="width: 35px;">
+        </a>
+    </div>
         </main>
         <script>
             // Cargar el contenido del header
