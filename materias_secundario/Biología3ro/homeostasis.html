@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeostasis</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <header id="home" class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html"><img src="../../img/gen.gif" id="gen"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Página Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../trucos.html">Trucos de Estudio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../biologia.html">Biología</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Homeostasis</h1>
+        
+        <h2>Introducción</h2>
+        <p>La homeostasis es el proceso mediante el cual los organismos mantienen un equilibrio interno estable, a pesar de los cambios en el entorno externo. Este equilibrio es crucial para el funcionamiento adecuado de las células y, en consecuencia, para la salud y la supervivencia del organismo.</p>
+        
+        <h2>Principios de la Homeostasis</h2>
+        <p>La homeostasis involucra varios principios fundamentales:</p>
+        <ul>
+            <li><strong>Mecanismos de Retroalimentación Negativa:</strong> Sistemas que detectan cambios en el entorno interno y activan respuestas que contrarrestan esos cambios, manteniendo así el equilibrio.</li>
+            <li><strong>Mecanismos de Retroalimentación Positiva:</strong> Sistemas que amplifican una respuesta hasta que se alcanza un objetivo específico, como la coagulación de la sangre.</li>
+        </ul>
+        <div class="video-container" aria-label="Enlace a video de YouTube">
+            <img src="https://img.youtube.com/vi/A4IuV2otuPM/hqdefault.jpg" alt="Haz clic para reproducir el video" onclick="loadVideo()">
+            <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <h2>Ejemplos de Homeostasis en el Cuerpo Humano</h2>
+        <p>El cuerpo humano utiliza varios mecanismos homeostáticos para mantener el equilibrio interno. Algunos ejemplos incluyen:</p>
+        <ul>
+            <li><strong>Regulación de la Temperatura Corporal:</strong> El cuerpo mantiene una temperatura interna constante de alrededor de 37°C mediante la sudoración, el escalofrío y la dilatación o constricción de los vasos sanguíneos.</li>
+            <li><strong>Regulación del Nivel de Glucosa en la Sangre:</strong> El páncreas produce insulina y glucagón para mantener los niveles de glucosa dentro de un rango estrecho, asegurando que las células tengan un suministro constante de energía.</li>
+            <li><strong>Equilibrio de Fluidos y Electrolitos:</strong> Los riñones regulan el volumen y la composición de los líquidos corporales mediante la filtración de la sangre y la excreción de desechos a través de la orina.</li>
+        </ul>
+        
+        <h2>Importancia de la Homeostasis</h2>
+        <p>La homeostasis es esencial para la vida. Sin ella, los organismos no podrían adaptarse a los cambios en su entorno y mantener las condiciones internas necesarias para la supervivencia celular y, en última instancia, del organismo.</p>
+    </div>
+    <script>
+        function loadVideo() {
+            var videoContainer = document.querySelector('.video-container');
+            var iframe = videoContainer.querySelector('iframe');
+            iframe.src = "https://www.youtube.com/embed/A4IuV2otuPM";
+            iframe.style.display = "block";
+            videoContainer.querySelector('img').style.display = "none";
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
