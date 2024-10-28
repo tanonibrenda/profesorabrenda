@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunicación entre Sistemas Biológicos</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <header id="home" class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html"><img src="../../img/gen.gif" id="gen"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Página Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../trucos.html">Trucos de Estudio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../biologia.html">Biología</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>La Comunicación entre Sistemas Biológicos</h1>
+        
+        <h2>Introducción</h2>
+        <p>La comunicación entre sistemas biológicos es un proceso fundamental que permite a los organismos coordinar sus funciones y responder eficazmente a su entorno. Esta comunicación puede ocurrir a nivel celular, tisular, orgánico y entre organismos.</p>
+        
+        <h2>Tipos de Comunicación Biológica</h2>
+        <p>Existen varios tipos de comunicación biológica, cada uno con su propio mecanismo y propósito:</p>
+        <ul>
+            <li><strong>Comunicación Celular:</strong> Las células se comunican a través de señales químicas como hormonas y neurotransmisores.</li>
+            <div><img src="../../img/biología/ComunicacioN-Celular-2-320.webp" alt="Comunicación celular"></div>
+            <li><strong>Comunicación entre Tejidos:</strong> Diferentes tejidos pueden comunicarse para coordinar funciones complejas, como en el sistema inmunológico.</li>
+            <div><img src="../../img/biología/comunicacion_tej.jpg" alt="comunicacion entre ganglio linfático y un tejido inflamado" style="width: 40%;"></div>
+            <li><strong>Comunicación entre Órganos:</strong> Los órganos envían señales químicas y nerviosas para mantener la homeostasis del organismo.</li>
+           <div><img src="../../img/biología/comunicacion_org.jpg" alt="comunicacion del sistema endócrino entre órganos" style="width: 50%; margin-bottom: 20px;"></div> 
+            <li><strong>Comunicación entre Organismos:</strong> Incluye señales visuales, auditivas, químicas y táctiles utilizadas para interactuar con otros individuos de la misma o diferente especie.</li>
+            <div><img src="../../img/biología/comunicacio_indiv.ppm" alt="comunicación entre 2 aves" style="width: 60%;"></div>
+        </ul>
+        
+        <h2>Mecanismos de Comunicación Celular</h2>
+        <p>La comunicación celular involucra varias etapas:</p>
+        <ul>
+            <li><strong>Recepción:</strong> Una célula detecta una señal externa a través de receptores en su membrana plasmática.</li>
+            <li><strong>Transducción:</strong> La señal es convertida en una forma que puede generar una respuesta dentro de la célula.</li>
+            <li><strong>Respuesta:</strong> La célula lleva a cabo una acción en respuesta a la señal, como la activación de genes específicos.</li>
+        </ul>
+        <p>Este por estos mecanismos que las células envían informacion sobre su posición, sus nutrientes, actividades metabólicas, y hasta si está en peligro</p>
+        <div><img src="../../img/biología/mecanismos_comunicacion.jpg" alt="cuadro sobre mecanismos de comunicación celular"></div>
+        
+        <h2>Ejemplos de Comunicación entre Sistemas Biológicos</h2>
+        <h3>Comunicación en el Sistema Nervioso</h3>
+        <p>Las neuronas se comunican a través de sinapsis, donde los neurotransmisores son liberados para transmitir señales eléctricas de una neurona a otra. Esto permite la coordinación rápida y precisa de las funciones corporales.</p>
+        
+        <h3>Comunicación en el Sistema Endocrino</h3>
+        <p>Las glándulas endocrinas liberan hormonas al torrente sanguíneo, que actúan como mensajeros químicos para regular procesos como el metabolismo, el crecimiento y la reproducción.</p>
+        
+        <h3>Comunicación Inmunológica</h3>
+        <p>Las células del sistema inmunológico, como los linfocitos, se comunican mediante señales químicas llamadas citoquinas para coordinar la respuesta del cuerpo a las infecciones.</p>
+        
+        <h2 class="text-center m-4">Importancia de la Comunicación Biológica</h2>
+        <p>La comunicación biológica es esencial para la supervivencia y el funcionamiento eficiente de los organismos. Sin una comunicación adecuada, los sistemas biológicos no podrían mantener la <a href="./homeostasis.html">homeostasis</a> para responder a cambios ambientales ni coordinar acciones complejas.</p>
+    </div>
+    <div class="container m-4">
+        <p>Les dejo acá el video de otra profe que explica el tema.</p>
+    </div>
+
+    <div class="video-container m-4 text-center" aria-label="Enlace a video de YouTube">
+        <img src="https://img.youtube.com/vi/bm2SRmi37Ro/hqdefault.jpg" alt="Haz clic para reproducir el video" onclick="loadVideo()">
+        <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <script>
+        function loadVideo() {
+            var videoContainer = document.querySelector('.video-container');
+            var iframe = videoContainer.querySelector('iframe');
+            iframe.src = "https://www.youtube.com/embed/bm2SRmi37Ro";
+            iframe.style.display = "block";
+            videoContainer.querySelector('img').style.display = "none";
+        }
+    </script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

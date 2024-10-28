@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de Respuestas Biológicas</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../style.css">
+   
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+    <header id="home" class="header">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../../index.html"><img src="../../img/gen.gif" id="gen"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="../../index.html">Página Principal</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../trucos.html">Trucos de Estudio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../biologia.html">Biología</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../../contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Tipos de Respuestas Biológicas</h1>
+        
+        <h2>Respuesta de Huida</h2>
+        <p>La respuesta de huida es un tipo de respuesta biológica que se activa en presencia de una amenaza inmediata. Es una reacción rápida que permite al organismo escapar del peligro y aumentar sus probabilidades de supervivencia. Este tipo de respuesta está mediada por el sistema nervioso y puede involucrar la liberación de adrenalina.</p>
+        <p><strong>Ejemplo:</strong> Un ciervo corre al escuchar un ruido fuerte en el bosque, percibido como un posible depredador.</p>
+        
+        <h2>Respuestas Instintivas</h2>
+        <p>Las respuestas instintivas son comportamientos innatos que ocurren de manera automática y no requieren aprendizaje previo. Estas respuestas están programadas genéticamente y son típicas de la especie.</p>
+        <p><strong>Ejemplo:</strong> Los recién nacidos humanos tienen un reflejo de succión que les permite amamantar.</p>
+        
+        <h2>Respuestas Aprendidas</h2>
+        <p>Las respuestas aprendidas son comportamientos adquiridos a través de la experiencia y el aprendizaje. Estas respuestas no están presentes al nacer y deben ser desarrolladas mediante la interacción con el entorno.</p>
+        <p><strong>Ejemplo:</strong> Un perro aprende a sentarse cuando su dueño le da una orden, gracias al entrenamiento y la recompensa.</p>
+        
+        <h2>Diferencias entre Respuestas Instintivas y Aprendidas</h2>
+        <ul>
+            <li><strong>Origen:</strong> Las respuestas instintivas son innatas y genéticas, mientras que las respuestas aprendidas resultan de la experiencia y el aprendizaje.</li>
+            <li><strong>Flexibilidad:</strong> Las respuestas instintivas son rígidas y no cambian, mientras que las respuestas aprendidas pueden adaptarse y cambiar con el tiempo.</li>
+            <li><strong>Necesidad de Práctica:</strong> Las respuestas instintivas no requieren práctica, mientras que las respuestas aprendidas necesitan repetición y reforzamiento.</li>
+        </ul>
+        <div>
+            <h3>Acá les dejo videos explicativos</h3>
+            <div class="video-container" aria-label="Enlace a video de YouTube">
+                <img src="https://img.youtube.com/vi/G4vsqYU8JZA/hqdefault.jpg" alt="Haz clic para reproducir el video" onclick="loadVideo()">
+                <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function loadVideo() {
+            var videoContainer = document.querySelector('.video-container');
+            var iframe = videoContainer.querySelector('iframe');
+            iframe.src = "https://www.youtube.com/embed/G4vsqYU8JZA";
+            iframe.style.display = "block";
+            videoContainer.querySelector('img').style.display = "none";
+        }
+    </script>
+</body>
+</html>

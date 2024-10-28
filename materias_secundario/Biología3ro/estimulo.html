@@ -6,9 +6,9 @@
     <title>Percepción: Modelo de Estímulo, Procesamiento y Respuesta</title>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../../style.css">
-    <script src="../../js/video.js"></script>
+    <!-- <script src="../../js/video.js"></script> -->
 </head>
-<body>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
     <header id="home" class="header">
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -91,6 +91,7 @@
             <img src="https://img.youtube.com/vi/BctpzAAcMTw/hqdefault.jpg" alt="Haz clic para reproducir el video" onclick="loadVideo()">
             <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
+    
         
         <h2>Tipos de Receptores</h2>
         <p>Los receptores son estructuras especializadas que detectan los estímulos y los transforman en señales nerviosas. Los principales tipos de receptores son:</p>
@@ -118,5 +119,14 @@
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function loadVideo() {
+            var videoContainer = document.querySelector('.video-container');
+            var iframe = videoContainer.querySelector('iframe');
+            iframe.src = "https://www.youtube.com/embed/BctpzAAcMTw?start=230";
+            iframe.style.display = "block";
+            videoContainer.querySelector('img').style.display = "none";
+        }
+    </script>
 </body>
 </html>
