@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tercer Año</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="../../style.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+  <header id="home" class="header">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../../index.html"><img src="../../img/gen.gif" id="gen"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="../../index.html">Página Principal</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../trucos.html">Trucos de Estudio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../biologia.html">Biología</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+          
+        <main class="main-content container m-2">
+          <h1>Biología de Tercer Año</h1>  
+          <h2>Programa de Biología de Tercer Año de la Provincia de Buenos Aires</h2>
+          <ol>
+            
+            <div>
+              <h3>Unidad 1: La respuesta al medio.</h3>
+              <div>
+              <h4>Mecanismos de respuesta en el nivel organismo</h4>
+              <ul>
+                <li><a href="./estimulo.html">Percepción: modelo de estímulo, procesamiento y respuesta.</a></li>
+                <li>Diferentes tipos de estímulos y de receptores, relación entre las características del estímulo y del receptor.</li>
+                <li>Diferentes tipos de respuestas: respuesta de huida. Respuestas instintivas versus aprendidas.</li>
+                <li>El papel de las señales en los comportamientos.</li>
+                <li>La comunicación entre sistemas biológicos. </li>
+                <li>Homeostasis</li>
+                
+              </ul>
+              </div>
+              <div>
+                <h4>Mecanismos de respuesta en el nivel celular.</h4>
+                <ul>
+                  <li>Respuestas celulares al ambiente. </li>
+                  <li>La percepción a nivel celular.</li>
+                  <li><a src="./membrana_cel.html">La membrana celular, receptores de membrana.</a></li>
+                  <li>Especificidad señal-receptor, modelo llavecerradura. </li>
+                  <li>Comunicación entre células.</li>
+                </ul>
+              </div>
+              <div>
+                <div><h3>Unidad 2: La regulación e integración de funciones.</h3>
+                  <div>
+                    <h4>Sistema nervioso. </h4>
+                    <ul>
+                      <li>Vías aferentes y eferentes. </li>
+                      <li>Sistema nervioso central y periférico. </li>
+                      <li>Órganos efectores: músculos y glándulas.</li>
+                      <li>Neuronas.</li>
+                      <li>Propagación del impulso nervioso. </li>
+                      <li>Sinapsis. </li>
+                      <li>Neurotransmisores.</li>
+                      <li>Sistema nervioso voluntario y autónomo (simpático y parasimpático).</li>
+                    </ul>
+                  </div>
+                  <div>
+                    <h4>Sistema endócrino. </h4>
+                    
+                    <ul>
+                      <li>Concepto de glándula, hormona y tejido blanco. </li>
+                      <li><a href="mtbglu.html">Caso A: Rol de las hormonas en la homeostasis. Regulación de la glucemia: Insulina, glucagon y diabetes. Respuesta celular a la acción de la insulina.  </a></li>
+                      <li>Caso B: rol de las hormonas en el desarrollo. Hormonas sexuales. La hipófisis como glándula integradora entre el sistema nervioso y endócrino. </li>
+                     
+                     
+                    </ul>
+                  </div>
+                </div>
+                <div>
+                  <h3>Unidad 3: Del ADN al organismo.</h3>
+                  <h4>Las proteínas como moléculas ejecutoras</h4>
+                  <div>
+                   <ul> 
+                    <li>Función biológica de las proteínas. </li>
+                    <li>Enzimas. </li>
+                    <li>Proteínas como polímeros con secuencia. </li>
+                    <li>Relación estructura y función en las proteínas.</li>
+                  </ul>
+                  </div>
+                  <h4>El ADN como la molécula portadora de la información para construir las proteínas.</h4>
+                  <div>
+                    <ul>
+                      <li><a href="genetica1.html">El ADN como polímero con secuencia.</a></li>
+                      <li>Duplicación del ADN. </li>
+                      <li>Síntesis de proteínas.</li>
+                      <li>El gen como segmento de ADN que codifica una proteína.</li>
+                      <li>Mutaciones.</li>
+                    </ul>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            
+          </ol>
+        
+        </main>
+        <script>
+            // Cargar el contenido del header
+            fetch('../../header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-placeholder').innerHTML = data;
+                });
+        </script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    
+</body>
+</html>

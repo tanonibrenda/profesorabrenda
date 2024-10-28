@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión Eficiente de Proyectos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+	<link rel="stylesheet" href="style.css">
+
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+  <header><div id="header-placeholder" role="banner"></div></header>
+    
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Gestión Eficiente de Proyectos</h1>
+
+        <h2>Trabajo en Equipo</h2>
+        <p>La metodología del trabajo o gestiones de proyecto es la busqueda de empresas eficaces, eficientes, productivas. Actualmente existen múchos métodos que se pueden adaptar a cada equipo. y herramientas que ayudan a llevar a cabo la coordinación del proyecto más dinámico.<br>
+        Mediante estas metologías se puede:</p>
+        <ul>
+            <li>Estandarizar el proceso: para garantizar un enfoque coherente y estructura.</li>
+            <li>Mejora de Eficiencia: reduce errores y minimiza revisiones, ahorrando tiempo y recursos.</li>
+            <li>Facilita la toma de decisiones: ayuda a gestores y miembros de equipo tomar decisiones informadas.</li>
+            <li>Permite Adaptabilidad: pese a dar una estructura donde basarse, las metodologías de trabajo permite adaptar el plan de acción a cada proyecto.  </li>
+        </ul> 
+        <h2>Planificación</h2>
+        <p>Establecer objetivos claros y alcanzables, definir el alcance del proyecto y crear un plan detallado con plazos y tareas específicas.<br>
+        Hacer una lista de las tareas a realizar y asignar esa tarea a un miembro del equipo hace maravillas en la planificación y organización.</p>
+        
+        <h2>Comunicación</h2>
+        <p>Fomentar una comunicación abierta y regular entre todos los miembros del equipo y las partes interesadas para asegurar que todos estén alineados y bien informados. Es un momento ideal para mejorar nuestras habilidades para comunicarnos con otros, negociar, ayudar, participar, empatizar con el equipo.</p>
+        
+        <h2>Monitoreo y Control</h2>
+        <p>Realizar un seguimiento continuo del progreso del proyecto, ajustar los planes según sea necesario y resolver problemas a medida que surgen.</p>
+        
+        <h2>Uso de Herramientas</h2>
+        <p>Utilizar herramientas de gestión de proyectos como Trello, Asana, Smartsheet de Google, Notion,  Microsoft Project o hasta un grupo de Whatsapp sirven para organizar tareas, asignar responsabilidades y mantener el seguimiento de los avances.</p>
+        
+        <h2>Evaluación</h2>
+        <p>Si las evaluaciones se hacen a lo largo del proyecto, en periodos para ir analizando como va el proyecto es mucho más fácil diagnosticar los errores y poder solucionarlos.<br>Después de completar el proyecto, evaluar el rendimiento del equipo y los resultados obtenidos para identificar áreas de mejora y lecciones aprendidas para futuros proyectos.</p>
+        <h2>Metodo Scrum</h2>
+        <p>Scrum es una metodología ágil de gestión de proyectos que se utiliza comúnmente en el desarrollo de software, pero también puede aplicarse a otros proyectos. Como por ejemplo, un trabajo integrador final sobre Biología.<br>
+        </p>
+        <div class="container"><img src="./img/estudio/pumas1jpg.webp" alt="foto de los pumas en un scrum"></div>
+        <h3>1. Roles Principales</h2>
+        <p>
+            <strong>Scrum Master:</strong> Facilita el proceso y ayuda al equipo a seguir las prácticas Scrum.<br>
+            <strong>Product Owner:</strong> Representa a los interesados y define los requerimientos del producto.<br>
+            <strong>Equipo de Desarrollo:</strong> Los miembros que crean el producto.
+        </p>
+        
+        <h3>2. Artefactos</h2>
+        <p>
+            <strong>Product Backlog:</strong> Lista priorizada de las funcionalidades y requisitos del producto.<br>
+            <strong>Sprint Backlog:</strong> Tareas seleccionadas para completarse durante el sprint.<br>
+            <strong>Incremento:</strong> La versión funcional del producto al final de cada sprint.
+        </p>
+        
+        <h3>3. Eventos</h2>
+        <p>
+            <strong>Sprint:</strong> Periodo de tiempo (generalmente 2-4 semanas) para completar un conjunto de tareas.<br>
+            <strong>Daily Stand-up:</strong> Reunión diaria para revisar el progreso y planificar el día.<br>
+            <strong>Sprint Review:</strong> Reunión al final del sprint para mostrar el trabajo realizado.<br>
+            <strong>Sprint Retrospective:</strong> Reunión para reflexionar sobre el sprint y mejorar el próximo.
+        </p>
+        <p>Este es un video con distintos tipos de métodos que los puede ayudar a gestionar su trabajo integrador</p>
+        
+        <div class="video-container" aria-label="Enlace a video de YouTube">
+            <img src="https://img.youtube.com/vi/yg8omLC2MKE/hqdefault.jpg" alt="Haz clic para reproducir el video" onclick="loadVideo()">
+            <iframe width="560" height="315" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    
+    </div>
+    <script>
+        // Cargar el contenido del header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+    </script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+      <script src="./js/video.js" defer></script>
+</body>
+</html>
