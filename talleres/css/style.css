@@ -2,6 +2,7 @@ body {
   font-family: 'Poppins', sans-serif;
 
   color: #48494a;
+  /* background-color: antiquewhite; */
   background-image: url(../images/body-bg.jpg);
 }
 
