@@ -439,3 +439,24 @@ a:focus {
 }
 
 /* end footer section*/
+
+/* items por año */
+.item4years {
+  font-size: 1.5rem;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th, td {
+  border: 1px solid #ccc;
+  padding: 8px;
+  text-align: center;
+}
+th {
+  background-color: #0077b6;
+  color: white;
+}
+tr:nth-child(even) {
+  background-color: #e0f7fa;
+}
