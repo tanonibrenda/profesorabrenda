@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Microorganismos: El Mundo Microscópico</title>
+    <style>
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #198754;
+            --accent-color: #ffc107;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: var(--dark-color);
+            background-color: #f9f9f9;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            color: white;
+            text-align: center;
+            padding: 3rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header h1 {
+            margin: 0;
+            font-size: 3rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 2;
+        }
+        
+        header p {
+            font-size: 1.2rem;
+            margin: 1rem 0 0;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .header-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/api/placeholder/1200/400');
+            background-size: cover;
+            background-position: center;
+            opacity: 0.2;
+            z-index: 1;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .section {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin: 40px 0;
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--primary-color);
+            padding-bottom: 10px;
+            font-size: 2rem;
+        }
+        
+        h3 {
+            color: var(--secondary-color);
+            margin-top: 20px;
+            font-size: 1.5rem;
+        }
+        
+        p {
+            margin-bottom: 20px;
+        }
+        
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .card {
+            flex: 1;
+            min-width: 250px;
+            background-color: var(--light-color);
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            text-align: center;
+        }
+        
+        .card-image {
+            width: 100%;
+            height: 150px;
+            background-color: #e9ecef;
+            border-radius: 5px;
+            margin-bottom: 15px;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .info-box {
+            background-color: rgba(13, 110, 253, 0.1);
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 5px 5px 0;
+        }
+        
+        .info-box h4 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .table-container {
+            overflow-x: auto;
+            margin: 30px 0;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        th {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .gallery-item {
+            height: 200px;
+            background-color: #e9ecef;
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background-color: rgba(0,0,0,0.7);
+            color: white;
+            padding: 10px;
+            font-size: 0.9rem;
+        }
+        
+        .applications {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
+        }
+        
+        .application-card {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+        
+        .application-card-header {
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+        
+        .application-card-body {
+            padding: 20px;
+        }
+        
+        footer {
+            background-color: var(--dark-color);
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2.5rem;
+            }
+            
+            .card-container {
+                flex-direction: column;
+            }
+            
+            .card {
+                min-width: 100%;
+            }
+            
+            .gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            }
+            
+            .applications {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-bg"></div>
+        <div class="container">
+            <h1>Microorganismos</h1>
+            <p>Explorando el fascinante mundo invisible a simple vista</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section class="section">
+            <h2>¿Qué son los microorganismos?</h2>
+            <p>Los microorganismos son seres vivos microscópicos que no pueden ser observados a simple vista. Se requiere un microscopio para poder visualizarlos. Estos organismos viven en todos los ambientes: aire, agua, suelo, alimentos e incluso dentro de otros seres vivos, incluidos los humanos.</p>
+            
+            <p>Son extremadamente diversos en cuanto a tamaño, estructura, metabolismo y formas de reproducción. Algunos son unicelulares, mientras que otros pueden formar colonias multicelulares. A pesar de su pequeño tamaño, tienen un impacto enorme en los ecosistemas y en nuestra vida cotidiana.</p>
+            
+            <div class="info-box">
+                <h4>Datos interesantes</h4>
+                <ul>
+                    <li>Los microorganismos fueron descubiertos por Anton van Leeuwenhoek en el siglo XVII.</li>
+                    <li>Aunque algunos microorganismos causan enfermedades, la mayoría son inofensivos o incluso beneficiosos.</li>
+                    <li>Se estima que existen entre 1 y 6 billones de especies microbianas en la Tierra, la mayoría aún por descubrir.</li>
+                    <li>El cuerpo humano alberga aproximadamente 10 veces más células microbianas que células humanas.</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Tipos de microorganismos</h2>
+            <p>Los microorganismos se clasifican en varios grupos principales, cada uno con características distintivas y roles únicos en el ecosistema global:</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/api/placeholder/300/200')"></div>
+                    <h3>Bacterias</h3>
+                    <p>Organismos procariotas unicelulares sin núcleo definido. Son extremadamente diversas y se encuentran en prácticamente todos los hábitats de la Tierra. Algunas bacterias son patógenas, pero la mayoría son beneficiosas o inofensivas.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/api/placeholder/300/200')"></div>
+                    <h3>Arqueas</h3>
+                    <p>Similares a las bacterias en tamaño y forma, pero genéticamente distintas. Muchas arqueas viven en condiciones extremas (extremófilos) como fuentes termales, ambientes muy salinos o muy ácidos.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/api/placeholder/300/200')"></div>
+                    <h3>Hongos microscópicos</h3>
+                    <p>Incluyen levaduras (unicelulares) y mohos (multicelulares). Los hongos descomponen la materia orgánica y son importantes en la producción de alimentos, medicamentos y como patógenos.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/api/placeholder/300/200')"></div>
+                    <h3>Protozoos</h3>
+                    <p>Organismos eucariotas unicelulares que se mueven activamente. Algunos son parásitos causantes de enfermedades, mientras que otros son de vida libre y fundamentales en las cadenas alimentarias acuáticas.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/api/placeholder/300/200')"></div>
+                    <h3>Algas microscópicas</h3>
+                    <p>Organismos fotosintéticos que forman la base de muchas cadenas alimentarias acuáticas. Incluyen diatomeas, dinoflagelados y muchas otras especies que contribuyen significativamente a la producción de oxígeno.</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-image" style="background-image: url('/api/placeholder/300/200')"></div>
+                    <h3>Virus</h3>
+                    <p>Agentes infecciosos que requieren células hospedadoras para reproducirse. No se consideran seres vivos en sentido estricto ya que no pueden reproducirse por sí mismos, pero tienen un impacto significativo en todos los ecosistemas.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Características y estructuras</h2>
+            
+            <h3>Estructura celular</h3>
+            <p>Los microorganismos pueden tener dos tipos principales de estructuras celulares:</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Característica</th>
+                            <th>Células procariotas</th>
+                            <th>Células eucariotas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ejemplos</td>
+                            <td>Bacterias y arqueas</td>
+                            <td>Protozoos, hongos, algas</td>
+                        </tr>
+                        <tr>
+                            <td>Núcleo</td>
+                            <td>No tienen núcleo definido</td>
+                            <td>Poseen núcleo rodeado por membrana nuclear</td>
+                        </tr>
+                        <tr>
+                            <td>Material genético</td>
+                            <td>ADN circular en el citoplasma</td>
+                            <td>ADN lineal dentro del núcleo</td>
+                        </tr>
+                        <tr>
+                            <td>Orgánulos</td>
+                            <td>Carecen de orgánulos membranosos</td>
+                            <td>Poseen mitocondrias, aparato de Golgi, etc.</td>
+                        </tr>
+                        <tr>
+                            <td>Tamaño</td>
+                            <td>Generalmente 0.2-2.0 μm</td>
+                            <td>Generalmente 10-100 μm</td>
+                        </tr>
+                        <tr>
+                            <td>Reproducción</td>
+                            <td>Principalmente fisión binaria</td>
+                            <td>Mitosis, meiosis, o formas asexuales</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Estructuras especializadas</h3>
+            <p>Muchos microorganismos poseen estructuras especializadas que les permiten adaptarse a diferentes ambientes:</p>
+            <ul>
+                <li><strong>Flagelos:</strong> Apéndices largos que permiten el movimiento</li>
+                <li><strong>Pili:</strong> Estructuras filamentosas utilizadas para adherirse a superficies o intercambiar material genético</li>
+                <li><strong>Cápsulas:</strong> Capas protectoras externas que ayudan a prevenir la deshidratación y resisten fagocitosis</li>
+                <li><strong>Esporas:</strong> Formas resistentes que permiten la supervivencia en condiciones adversas</li>
+                <li><strong>Biofilms:</strong> Comunidades estructuradas de microorganismos adheridos a una superficie</li>
+            </ul>
+        </section>
+        
+        <section class="section">
+            <h2>Importancia ecológica</h2>
+            <p>Los microorganismos son fundamentales para el funcionamiento de los ecosistemas por varias razones:</p>
+            
+            <div class="card-container">
+                <div class="card">
+                    <h3>Ciclos biogeoquímicos</h3>
+                    <p>Participan en los ciclos del carbono, nitrógeno, fósforo y azufre, transformando estos elementos en formas aprovechables por otros organismos.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Descomposición</h3>
+                    <p>Descomponen la materia orgánica muerta y reciclan los nutrientes, manteniendo la fertilidad del suelo y limpiando los ecosistemas.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Producción primaria</h3>
+                    <p>Las cianobacterias y algas microscópicas realizan fotosíntesis, produciendo oxígeno y sirviendo como base de las cadenas alimentarias.</p>
+                </div>
+                
+                <div class="card">
+                    <h3>Simbiosis</h3>
+                    <p>Forman relaciones mutualistas con plantas (ej. micorrizas, fijación de nitrógeno) y animales (ej. microbiota intestinal).</p>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>¿Sabías que?</h4>
+                <p>Las cianobacterias fueron responsables de la "Gran Oxidación" que ocurrió hace aproximadamente 2.4 billones de años, cuando el oxígeno comenzó a acumularse en la atmósfera terrestre, cambiando dramáticamente la química del planeta y permitiendo la evolución de formas de vida más complejas.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Microorganismos y la salud humana</h2>
+            <p>La relación entre los microorganismos y la salud humana es compleja:</p>
+            
+            <h3>Microbiota humana</h3>
+            <p>El cuerpo humano alberga billones de microorganismos que conforman nuestra microbiota. Estos incluyen bacterias, hongos y virus que viven en nuestra piel, boca, sistema digestivo y otros órganos. La mayoría son beneficiosos o inofensivos.</p>
+            
+            <h3>Beneficios de la microbiota</h3>
+            <ul>
+                <li>Ayuda en la digestión de alimentos</li>
+                <li>Produce vitaminas esenciales (como K y B12)</li>
+                <li>Protege contra patógenos</li>
+                <li>Modula el sistema inmunológico</li>
+                <li>Influye en el desarrollo neurológico</li>
+            </ul>
+            
+            <h3>Microorganismos patógenos</h3>
+            <p>Algunos microorganismos pueden causar enfermedades en humanos. Estos incluyen:</p>
+            
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Tipo</th>
+                            <th>Ejemplos</th>
+                            <th>Enfermedades asociadas</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Bacterias</td>
+                            <td>Salmonella, Streptococcus, Mycobacterium tuberculosis</td>
+                            <td>Infecciones intestinales, faringitis estreptocócica, tuberculosis</td>
+                        </tr>
+                        <tr>
+                            <td>Virus</td>
+                            <td>Influenza, SARS-CoV-2, VIH</td>
+                            <td>Gripe, COVID-19, SIDA</td>
+                        </tr>
+                        <tr>
+                            <td>Hongos</td>
+                            <td>Candida albicans, Aspergillus</td>
+                            <td>Candidiasis, aspergilosis</td>
+                        </tr>
+                        <tr>
+                            <td>Protozoos</td>
+                            <td>Plasmodium, Giardia, Entamoeba</td>
+                            <td>Malaria, giardiasis, amebiasis</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <h3>Resistencia antimicrobiana</h3>
+            <p>El uso excesivo e inadecuado de antibióticos ha llevado al desarrollo de bacterias resistentes a los antibióticos, una de las mayores amenazas para la salud global actual. Es importante utilizar estos medicamentos solo cuando sea necesario y según las indicaciones médicas.</p>
+        </section>
+        
+        <section class="section">
+            <h2>Aplicaciones de los microorganismos</h2>
+            <p>Los microorganismos tienen numerosas aplicaciones prácticas en diferentes ámbitos:</p>
+            
+            <div class="applications">
+                <div class="application-card">
+                    <div class="application-card-header">Industria alimentaria</div>
+                    <div class="application-card-body">
+                        <ul>
+                            <li>Producción de lácteos fermentados (yogur, queso)</li>
+                            <li>Fermentación de bebidas alcohólicas (cerveza, vino)</li>
+                            <li>Producción de pan y productos de panadería</li>
+                            <li>Fermentación de alimentos tradicionales (kimchi, chucrut)</li>
+                            <li>Producción de vinagre y condimentos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="application-card">
+                    <div class="application-card-header">Medicina y farmacia</div>
+                    <div class="application-card-body">
+                        <ul>
+                            <li>Producción de antibióticos</li>
+                            <li>Desarrollo de vacunas</li>
+                            <li>Producción de insulina y hormonas</li>
+                            <li>Probióticos terapéuticos</li>
+                            <li>Diagnóstico de enfermedades</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="application-card">
+                    <div class="application-card-header">Biotecnología</div>
+                    <div class="application-card-body">
+                        <ul>
+                            <li>Producción de enzimas industriales</li>
+                            <li>Ingeniería genética</li>
+                            <li>Biorremediación de contaminantes</li>
+                            <li>Producción de biocombustibles</li>
+                            <li>Síntesis de bioplásticos</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="application-card">
+                    <div class="application-card-header">Agricultura</div>
+                    <div class="application-card-body">
+                        <ul>
+                            <li>Biofertilizantes</li>
+                            <li>Control biológico de plagas</li>
+                            <li>Fijación de nitrógeno</li>
+                            <li>Compostaje</li>
+                            <li>Mejora de la salud del suelo</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="info-box">
+                <h4>Microorganismos en la investigación</h4>
+                <p>Los microorganismos como Escherichia coli y Saccharomyces cerevisiae (levadura de panadería) son organismos modelo fundamentales en la investigación científica. Han contribuido enormemente a nuestro entendimiento de la biología molecular, la genética y el metabolismo.</p>
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2>Microorganismos extremófilos</h2>
+            <p>Algunos microorganismos han evolucionado para sobrevivir en condiciones extremas que serían letales para la mayoría de las formas de vida. Estos "extremófilos" representan el límite de la adaptación biológica y son de gran interés científico:</p>
+            
+            <div class="gallery">
+                <div class="gallery-item" style="background-image: url('/api/placeholder/300/200')">
+                    <div class="gallery-caption">Termófilos: Viven en fuentes termales a temperaturas superiores a 45°C</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('/api/placeholder/300/200')">
+                    <div class="gallery-caption">Psicrófilos: Prosperan en temperaturas por debajo de 15°C</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('/api/placeholder/300/200')">
+                    <div class="gallery-caption">Halófilos: Viven en ambientes con alta concentración de sal</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('/api/placeholder/300/200')">
+                    <div class="gallery-caption">Acidófilos: Sobreviven en pH extremadamente bajo (ácido)</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('/api/placeholder/300/200')">
+                    <div class="gallery-caption">Alcalófilos: Prosperan en ambientes con pH alto (básico)</div>
+                </div>
+                <div class="gallery-item" style="background-image: url('/api/placeholder/300/200')">
+                    <div class="gallery-caption">Barófilos: Habitan las profundidades marinas bajo alta presión</div>
+                </div>
+            </div>
+            
+            <p>El estudio de estos organismos ha llevado al descubrimiento de enzimas y compuestos con aplicaciones industriales únicas, y también ha ampliado nuestra comprensión sobre los límites de la vida y la posibilidad de vida en otros planetas.</p>
+        </section>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <!-- <h3>Microorganismos: El Mundo Microscópico</h3>
+            <p>Una exploración del fascinante universo de los seres vivos más pequeños</p>
+            <p>© 2025 - Ciencias Microbiológicas</p> -->
+
+            <h3><a href="./cuartoblg.html">Volver al programa de cuarto año</a></h3>
+        </div>
+    </footer>
+</body>
+</html>

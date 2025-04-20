@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Célula: Historia y Descubrimiento</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f5f5f5;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 30px;
+        }
+        .timeline {
+            position: relative;
+            max-width: 95%;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: #3498db;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        .event {
+            padding: 10px 40px;
+            position: relative;
+            background-color: inherit;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        .event::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid #3498db;
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        .left {
+            left: 0;
+        }
+        .right {
+            left: 50%;
+        }
+        .left::after {
+            right: -10px;
+        }
+        .right::after {
+            left: -10px;
+        }
+        .content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .content h3 {
+            color: #3498db;
+            margin-top: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 20px auto;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: #2c3e50;
+            color: white;
+        }
+        @media screen and (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            .event {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            .event::after {
+                left: 22px;
+            }
+            .left::after, .right::after {
+                left: 22px;
+            }
+            .right {
+                left: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>La Célula: Unidad Básica de la Vida</h1>
+        <p>Historia, descubrimiento y avances científicos</p>
+    </header>
+
+    <div class="container">
+        <section id="introduccion">
+            <h2>¿Qué es la Célula?</h2>
+            <p>La célula es la unidad estructural y funcional básica de todos los organismos vivos. Es la entidad viva más pequeña capaz de funcionar de manera autónoma. Cada célula contiene toda la información hereditaria necesaria para regular sus funciones y para transmitir esta información a la siguiente generación celular.</p>
+            <p>Existen dos tipos principales de células:</p>
+            <ul>
+                <li><strong>Células procariotas:</strong> Más simples, sin núcleo definido, típicas de bacterias y arqueas.</li>
+                <li><strong>Células eucariotas:</strong> Más complejas, con núcleo y orgánulos membranosos, presentes en plantas, animales, hongos y protistas.</li>
+            </ul>
+            <img src="/api/placeholder/400/300" alt="Comparación entre célula procariota y eucariota">
+        </section>
+
+        <section id="historia">
+            <h2>Historia del Descubrimiento Celular</h2>
+            <p>El estudio de la célula, conocido como citología, ha sido fundamental para entender la vida tal como la conocemos hoy. A continuación, presentamos los hitos más importantes en esta fascinante historia científica.</p>
+            
+            <div class="timeline">
+                <div class="event left">
+                    <div class="content">
+                        <h3>1665: Robert Hooke</h3>
+                        <p>El científico inglés Robert Hooke observó pequeños compartimentos en una lámina de corcho usando un microscopio rudimentario. Los llamó "celdillas" o "células", derivado del latín "cellula" que significa pequeña habitación. Esta fue la primera observación documentada de células, aunque Hooke realmente observó las paredes celulares de células vegetales muertas.</p>
+                    </div>
+                </div>
+                <div class="event right">
+                    <div class="content">
+                        <h3>1674: Anton van Leeuwenhoek</h3>
+                        <p>El naturalista holandés Anton van Leeuwenhoek construyó microscopios mejorados que permitieron observar por primera vez organismos unicelulares vivos, como bacterias y protozoos, a los que llamó "animálculos". Sus descubrimientos abrieron un nuevo mundo microscópico a la ciencia.</p>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="content">
+                        <h3>1838: Matthias Schleiden</h3>
+                        <p>El botánico alemán Matthias Schleiden propuso que todos los tejidos vegetales estaban compuestos por células, estableciendo que la célula era la unidad básica estructural de las plantas. Fue una de las primeras partes de lo que se convertiría en la teoría celular.</p>
+                    </div>
+                </div>
+                <div class="event right">
+                    <div class="content">
+                        <h3>1839: Theodor Schwann</h3>
+                        <p>El fisiólogo alemán Theodor Schwann extendió el trabajo de Schleiden a los animales, demostrando que también estaban compuestos de células. Junto con Schleiden, formularon los dos primeros postulados de la teoría celular: todos los organismos están compuestos por una o más células, y la célula es la unidad básica de estructura de todos los organismos.</p>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="content">
+                        <h3>1855: Rudolf Virchow</h3>
+                        <p>El médico alemán Rudolf Virchow completó la teoría celular con su famosa frase "Omnis cellula e cellula" (toda célula proviene de otra célula), estableciendo que las células no surgen espontáneamente sino que se forman por la división de células preexistentes. Este fue el tercer postulado fundamental de la teoría celular.</p>
+                    </div>
+                </div>
+                <div class="event right">
+                    <div class="content">
+                        <h3>1931: Ernst Ruska</h3>
+                        <p>El físico alemán Ernst Ruska inventó el microscopio electrónico, que permitiría posteriormente observar estructuras celulares con un nivel de detalle nunca antes alcanzado, incluyendo virus y componentes subcelulares.</p>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="content">
+                        <h3>1953: James Watson y Francis Crick</h3>
+                        <p>Basándose en los datos de difracción de rayos X de Rosalind Franklin y Maurice Wilkins, Watson y Crick propusieron la estructura de doble hélice del ADN, la molécula que almacena la información genética en las células. Este descubrimiento revolucionó nuestra comprensión de cómo funcionan las células y cómo se transmite la información hereditaria.</p>
+                    </div>
+                </div>
+                <div class="event right">
+                    <div class="content">
+                        <h3>1974-1979: Avances en técnicas de ADN recombinante</h3>
+                        <p>El desarrollo de técnicas para cortar, pegar y replicar ADN abrió las puertas a la ingeniería genética y la biotecnología moderna, permitiendo manipular el material genético de las células para diversos fines científicos y médicos.</p>
+                    </div>
+                </div>
+                <div class="event left">
+                    <div class="content">
+                        <h3>2003: Proyecto Genoma Humano</h3>
+                        <p>Se completó la secuenciación del genoma humano, proporcionando un mapa completo de los aproximadamente 20,000-25,000 genes humanos. Este logro ha sido fundamental para avanzar en la comprensión de la genética celular y las enfermedades.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="importancia">
+            <h2>Importancia del Estudio Celular</h2>
+            <p>El estudio de la célula ha sido fundamental para el desarrollo de numerosos campos científicos y aplicaciones médicas:</p>
+            <ul>
+                <li>Comprensión de enfermedades y desarrollo de tratamientos</li>
+                <li>Avances en biotecnología y medicina regenerativa</li>
+                <li>Desarrollo de antibióticos y vacunas</li>
+                <li>Comprensión de la evolución y diversidad biológica</li>
+                <li>Tecnologías de modificación genética y terapia génica</li>
+            </ul>
+            <p>Hoy en día, las investigaciones sobre células madre, edición genética con CRISPR-Cas9 y biología sintética continúan expandiendo nuestro conocimiento y capacidades para manipular las células con fines beneficiosos.</p>
+        </section>
+    </div>
+
+    <footer>
+        <!-- <p>© 2025 - La Célula: Historia y Descubrimiento</p>
+        <p>Una exploración de la unidad fundamental de la vida</p> -->
+        <h3><a href="./segundoblg.html">Volver al Programa de Segundo año</a></h3>
+    </footer>
+</body>
+</html>
