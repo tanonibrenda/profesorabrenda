@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VacunARte: Protegiendo nuestro futuro</title>
+    <style>
+        :root {
+            --primary: #3498db;
+            --secondary: #2ecc71;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            background-color: #f9f9f9;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            text-align: center;
+            padding: 3rem 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('/api/placeholder/1200/300');
+            background-size: cover;
+            opacity: 0.1;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+        
+        h2 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-top: 2rem;
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 0.5rem;
+        }
+        
+        h3 {
+            font-size: 1.5rem;
+            color: var(--dark);
+        }
+        
+        .tagline {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-bottom: 1.5rem;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: var(--accent);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: transform 0.3s, box-shadow 0.3s;
+            margin-top: 1rem;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+            transition: transform 0.3s;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .flex-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: space-between;
+        }
+        
+        .flex-item {
+            flex: 1 1 300px;
+        }
+        
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .stat-item {
+            padding: 1rem;
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+        }
+        
+        .stat-text {
+            font-size: 1.1rem;
+            color: var(--dark);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            background-color: white;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+        
+        .timeline {
+            position: relative;
+            max-width: 1200px;
+            margin: 3rem auto;
+        }
+        
+        .timeline::after {
+            content: '';
+            position: absolute;
+            width: 6px;
+            background-color: var(--primary);
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            margin-left: -3px;
+        }
+        
+        .timeline-item {
+            padding: 10px 40px;
+            position: relative;
+            width: 50%;
+            box-sizing: border-box;
+        }
+        
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            width: 25px;
+            height: 25px;
+            background-color: white;
+            border: 4px solid var(--secondary);
+            border-radius: 50%;
+            top: 15px;
+            z-index: 1;
+        }
+        
+        .left {
+            left: 0;
+        }
+        
+        .right {
+            left: 50%;
+        }
+        
+        .left::after {
+            right: -17px;
+        }
+        
+        .right::after {
+            left: -17px;
+        }
+        
+        .timeline-content {
+            padding: 20px;
+            background-color: white;
+            border-radius: 6px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .timeline-date {
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+        }
+        
+        .faq-question {
+            font-weight: bold;
+            color: var(--primary);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 1rem 0;
+            display: none;
+        }
+        
+        .active .faq-answer {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::after {
+                left: 31px;
+            }
+            
+            .timeline-item {
+                width: 100%;
+                padding-left: 70px;
+                padding-right: 25px;
+            }
+            
+            .timeline-item::after {
+                left: 15px;
+            }
+            
+            .left::after, .right::after {
+                left: 15px;
+            }
+            
+            .right {
+                left: 0;
+            }
+            
+            .flex-container {
+                flex-direction: column;
+            }
+            
+            .stats {
+                flex-direction: column;
+            }
+            
+            .stat-item {
+                margin-bottom: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <h1>VacunARte</h1>
+            <p class="tagline">Protegemos el presente, aseguramos el futuro</p>
+            <a href="#calendario" class="btn">Ver Calendario de Vacunación</a>
+        </div>
+    </header>
+    
+    <div class="container">
+        <section id="importancia">
+            <h2>¿Por qué vacunarse es importante?</h2>
+            <div class="flex-container">
+                <div class="flex-item card">
+                    <h3>Protección Individual</h3>
+                    <p>Las vacunas te protegen de enfermedades graves que pueden causar discapacidad o incluso la muerte. Cuando te vacunás, tu sistema inmunológico genera defensas específicas contra ese patógeno.</p>
+                    <p>Lo mejor de todo es que la mayoría de las vacunas te protegen de por vida o por muchos años con mínimos efectos secundarios.</p>
+                </div>
+                <div class="flex-item card">
+                    <h3>Protección Colectiva</h3>
+                    <p>Cuando la mayoría de la población está vacunada, se crea lo que los científicos llaman "inmunidad colectiva" o "inmunidad de rebaño". Esto significa que incluso las personas que no pueden vacunarse (como bebés muy pequeños o personas con ciertas enfermedades) están protegidas porque el patógeno no puede propagarse fácilmente.</p>
+                </div>
+                <div class="flex-item card">
+                    <h3>Erradicación de enfermedades</h3>
+                    <p>Gracias a las vacunas, hemos logrado erradicar la viruela a nivel mundial y estamos cerca de eliminar la poliomielitis. Otras enfermedades como el sarampión, la rubéola y el tétanos neonatal han disminuido drásticamente.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section id="estadisticas">
+            <h2>Las cifras hablan por sí solas</h2>
+            <div class="stats">
+                <div class="stat-item">
+                    <span class="stat-number">95%</span>
+                    <span class="stat-text">De cobertura necesaria para eliminar el sarampión</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">80-85%</span>
+                    <span class="stat-text">De cobertura para inmunidad colectiva contra la polio</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">90-95%</span>
+                    <span class="stat-text">Efectividad de la mayoría de las vacunas del calendario nacional</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>¿Qué es la inmunidad colectiva?</h3>
+                <p>La inmunidad colectiva ocurre cuando un porcentaje suficientemente alto de la población es inmune a una enfermedad, lo que dificulta la propagación del patógeno. Cada enfermedad requiere un porcentaje diferente de población inmunizada:</p>
+                <ul>
+                    <li><strong>Sarampión:</strong> 95% de la población vacunada</li>
+                    <li><strong>Poliomielitis:</strong> 80-85% de la población vacunada</li>
+                    <li><strong>Rubéola:</strong> 85-87% de la población vacunada</li>
+                    <li><strong>Difteria:</strong> 85% de la población vacunada</li>
+                    <li><strong>Tos ferina:</strong> 92-94% de la población vacunada</li>
+                </ul>
+                <p>Cuando estos porcentajes disminuyen, las enfermedades que estaban controladas pueden reaparecer, causando brotes y epidemias.</p>
+            </div>
+        </section>
+        
+        <section id="calendario">
+            <h2>Calendario Nacional de Vacunación Argentina</h2>
+            <div class="card">
+                <p>El Calendario Nacional de Vacunación incluye vacunas gratuitas y obligatorias para todas las etapas de la vida. Estas son las vacunas recomendadas para adolescentes:</p>
+                
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Edad</th>
+                            <th>Vacunas</th>
+                            <th>Protege contra</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>11 años</td>
+                            <td>VPH (Virus del Papiloma Humano)</td>
+                            <td>Previene diversos tipos de cáncer, especialmente el cáncer de cuello uterino y verrugas genitales</td>
+                        </tr>
+                        <tr>
+                            <td>11 años</td>
+                            <td>Triple bacteriana acelular (dTpa)</td>
+                            <td>Difteria, tétanos y tos convulsa (pertussis)</td>
+                        </tr>
+                        <tr>
+                            <td>11 años</td>
+                            <td>Meningocócica ACYW</td>
+                            <td>Previene la meningitis y otras infecciones graves causadas por meningococo</td>
+                        </tr>
+                        <tr>
+                            <td>11-12 años</td>
+                            <td>Hepatitis B</td>
+                            <td>Para quienes no la hayan recibido anteriormente (esquema de 3 dosis)</td>
+                        </tr>
+                        <tr>
+                            <td>15 años</td>
+                            <td>Refuerzo Meningocócica ACYW</td>
+                            <td>Refuerzo para prolongar la protección contra la meningitis</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <p>Si tenés más de 15 años y no recibiste alguna de estas vacunas, ¡no te preocupes! Todavía podés ponerte al día con tu esquema de vacunación. Consultá en tu centro de salud más cercano.</p>
+                
+                <a href="https://www.argentina.gob.ar/salud/vacunas" target="_blank" class="btn">Calendario completo oficial</a>
+            </div>
+        </section>
+        
+        <section id="historia">
+            <h2>Historia de las vacunas: Un viaje a través del tiempo</h2>
+            <div class="timeline">
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">1796</div>
+                        <h3>El experimento de Jenner</h3>
+                        <p>Edward Jenner realizó el primer experimento documentado de vacunación, inoculando a un niño con viruela de vaca (vaccinia) para protegerlo contra la viruela humana.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">1885</div>
+                        <h3>La vacuna antirrábica</h3>
+                        <p>Louis Pasteur desarrolló la primera vacuna contra la rabia, salvando la vida de Joseph Meister, un niño de 9 años mordido por un perro rabioso.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">1955</div>
+                        <h3>Vacuna contra la polio</h3>
+                        <p>Jonas Salk desarrolló la primera vacuna efectiva contra la poliomielitis, una enfermedad que causaba parálisis y muerte en miles de niños cada año.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">1979</div>
+                        <h3>Erradicación de la viruela</h3>
+                        <p>La Organización Mundial de la Salud declaró oficialmente erradicada la viruela a nivel mundial, la primera enfermedad humana eliminada gracias a la vacunación.</p>
+                    </div>
+                </div>
+                <div class="timeline-item left">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2006</div>
+                        <h3>Vacuna contra el VPH</h3>
+                        <p>Se aprueba la primera vacuna contra el Virus del Papiloma Humano, capaz de prevenir varios tipos de cáncer, incluido el cáncer de cuello uterino.</p>
+                    </div>
+                </div>
+                <div class="timeline-item right">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2020-2021</div>
+                        <h3>Vacunas contra COVID-19</h3>
+                        <p>En tiempo récord, se desarrollan y aprueban vacunas efectivas contra el coronavirus, demostrando el poder de la ciencia moderna.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="efectos">
+            <h2>Efectos adversos: Lo que necesitás saber</h2>
+            <div class="card">
+                <p>Como cualquier medicamento, las vacunas pueden causar efectos secundarios. Sin embargo, la mayoría son leves y temporales, y los beneficios de vacunarse superan ampliamente los posibles riesgos.</p>
+                
+                <h3>Efectos secundarios comunes</h3>
+                <ul>
+                    <li>Dolor, enrojecimiento o hinchazón en el sitio de la inyección</li>
+                    <li>Fiebre leve</li>
+                    <li>Fatiga o malestar general</li>
+                    <li>Dolor muscular o de cabeza</li>
+                </ul>
+                
+                <h3>¿Sabías que...?</h3>
+                <p>Estos efectos secundarios son en realidad una buena señal: significan que tu sistema inmunológico está respondiendo a la vacuna y creando las defensas necesarias.</p>
+                
+                <h3>Efectos adversos graves</h3>
+                <p>Los efectos adversos graves son extremadamente raros. El riesgo de sufrir una complicación grave por una vacuna es muchísimo menor que el riesgo de complicaciones por la enfermedad que previene.</p>
+                
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-number">1 en 1,000,000</span>
+                        <span class="stat-text">Probabilidad aproximada de una reacción alérgica grave</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">15-30 minutos</span>
+                        <span class="stat-text">Tiempo que te pedirán esperar después de vacunarte para monitorear posibles reacciones</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="mitos">
+            <h2>Desmitificando las vacunas</h2>
+            <div class="card">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        "Las vacunas pueden causar autismo" <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>FALSO.</strong> Numerosos estudios científicos rigurosos han demostrado que no existe ninguna relación entre las vacunas y el autismo. El estudio que sugirió esta relación fue retractado por fraudulento y su autor perdió su licencia médica.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        "Es mejor desarrollar inmunidad natural que vacunarse" <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>FALSO.</strong> Las enfermedades prevenibles por vacunas pueden ser graves e incluso mortales. Vacunarse te da la protección sin sufrir la enfermedad y sus posibles complicaciones.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        "Las vacunas contienen ingredientes tóxicos" <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>FALSO.</strong> Los ingredientes de las vacunas están presentes en cantidades mínimas y han sido exhaustivamente probados para garantizar su seguridad. Sustancias como el aluminio y el formaldehído existen naturalmente en nuestro cuerpo en cantidades mayores que las presentes en las vacunas.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item">
+                    <div class="faq-question">
+                        "Ya no necesitamos vacunarnos porque las enfermedades han desaparecido" <span>+</span>
+                    </div>
+                    <div class="faq-answer">
+                        <p><strong>FALSO.</strong> Las enfermedades han disminuido precisamente gracias a las vacunas. Si dejamos de vacunarnos, estas enfermedades volverán rápidamente, como ha ocurrido en países donde la cobertura de vacunación ha disminuido.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- <section id="testimonios">
+            <h2>Voces de tu generación</h2>
+            <div class="flex-container">
+                <div class="flex-item card">
+                    <h3>Martina, 16 años</h3>
+                    <p>"Al principio tenía miedo de la vacuna del VPH porque escuché rumores en redes sociales. Pero después investigué y entendí que me estaba protegiendo contra varios tipos de cáncer. Es un pequeño pinchazo que puede salvar mi vida en el futuro."</p>
+                </div>
+                <div class="flex-item card">
+                    <h3>Lucas, 15 años</h3>
+                    <p>"Mi primo tuvo meningitis antes de que existiera la vacuna meningocócica y quedó con secuelas permanentes. Cuando me tocó vacunarme, no lo dudé ni un segundo. Protegerse es cuidarse a uno mismo y a los demás."</p>
+                </div>
+                <div class="flex-item card">
+                    <h3>Sofía, 17 años</h3>
+                    <p>"Me informo antes de tomar decisiones sobre mi salud. Vacunarme fue una decisión que tomé por mí misma después de leer fuentes confiables. Me siento empoderada sabiendo que estoy protegida contra enfermedades graves."</p>
+                </div>
+            </div>
+        </section> -->
+        
+        <section id="accion">
+            <h2>¡Es tu momento de actuar!</h2>
+            <div class="card">
+                <h3>Checklist para adolescentes</h3>
+                <ul>
+                    <li>Verificá tu carnet de vacunación para asegurarte de tener todas las vacunas al día</li>
+                    <li>Consultá en tu centro de salud más cercano si necesitás completar alguna vacuna</li>
+                    <li>Compartí esta información con tus amigos y familiares</li>
+                    <li>Si tenés dudas, preguntá a profesionales de la salud, no te guíes por información no verificada en redes sociales</li>
+                </ul>
+                
+                <h3>¡Recordá!</h3>
+                <p>Las vacunas del Calendario Nacional son <strong>gratuitas y obligatorias</strong> en Argentina. Es tu derecho recibirlas y tu responsabilidad estar protegido.</p>
+                
+                <a href="#calendario" class="btn">Ver qué vacunas te corresponden</a>
+            </div>
+        </section>
+    </div>
+    
+    <footer>
+        <h3>VacunARte</h3>
+        <p>Protegemos el presente, aseguramos el futuro</p>
+        <p>Esta página fue creada con fines educativos. Para información oficial, consultá el sitio del <a href="https://www.argentina.gob.ar/salud/vacunas" style="color: var(--secondary);">Ministerio de Salud de Argentina</a>.</p>
+
+        <h3><a href="cuartoblg.html" style="color:#f1f1f1;">Volver al programa de cuarto año</a></h3>
+    </footer>
+    
+    <script>
+        // Script para las preguntas frecuentes
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const faqItem = question.parentElement;
+                faqItem.classList.toggle('active');
+                
+                const toggleText = question.querySelector('span');
+                toggleText.textContent = faqItem.classList.contains('active') ? '-' : '+';
+            });
+        });
+    </script>
+</body>
+</html>
