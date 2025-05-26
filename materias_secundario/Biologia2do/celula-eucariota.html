@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Células Eucariotas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f4f8;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .dark-mode {
+      background-color: #1a202c;
+      color: #f0f0f0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    header, nav {
+      background-color: #2563eb;
+      color: white;
+      padding: 10px 20px;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 10px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #2563eb;
+      padding-bottom: 5px;
+    }
+
+    img {
+      max-width: 100%;
+      border-radius: 8px;
+      display: block;
+      margin: 10px auto;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 20px;
+    }
+
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #e2e8f0;
+    }
+
+    .dark-mode th {
+      background-color: #2d3748;
+    }
+
+    .dark-mode table, .dark-mode th, .dark-mode td {
+      border-color: #4a5568;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      margin: 40px 0 10px;
+      color: #888;
+    }
+
+    .toggle-button {
+      margin: 10px auto;
+      display: block;
+      padding: 8px 16px;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .quiz-question {
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Células Eucariotas</h1>
+    <nav>
+      <a href="#estructura">Estructura</a>
+      <a href="#comparacion">Comparación</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+  <button class="toggle-button" onclick="toggleDarkMode()">Modo claro/oscuro</button>
+
+  <div class="container">
+    <section id="estructura">
+      <h2>Estructura de la Célula Eucariota</h2>
+      <img src="../../img/biología/celulaseucariotas.jpg" alt="Célula Eucariotas animal y vegetal">
+      <p>Las células eucariotas contienen un núcleo definido y diversos orgánulos membranosos. Están presentes en animales, plantas, hongos y protistas.</p>
+      <ul>
+        <li><strong>Núcleo:</strong> Contiene el ADN y regula la actividad celular.</li>
+        <li><strong>Membrana plasmática:</strong> Separadora entre el exterior y el interior.</li>
+        <li><strong>Citoplasma:</strong> Medio interno donde se ubican los orgánulos.</li>
+        <li><strong>Mitocondrias:</strong> Generan energía celular.</li>
+        <li><strong>Retículo endoplasmático:</strong> Transporte de sustancias.</li>
+        <li><strong>Aparato de Golgi:</strong> Empaqueta y distribuye sustancias.</li>
+        <li><strong>Ribosomas:</strong> Sintetizan proteínas.</li>
+        <li><strong>Lisosomas:</strong> Digestón celular (células animales).</li>
+        <li><strong>Cloroplastos y pared celular:</strong> En células vegetales.</li>
+      </ul>
+    </section>
+    <section>
+        <div class="container">
+            <div class="card">
+                <a href="https://www.youtube.com/watch?v=fo6V3_MScxU" target="_blank">
+  <img src="placeholder_image.jpg" alt="Haz clic para ver el video" width="320" height="180">
+</a>
+                <div class="card-content">
+                    <h3>Características de las Células Eucariotas</h3>
+
+        </div>
+    </section>
+
+    <section id="comparacion">
+      <h2>Comparación con Células Procariotas</h2>
+      <p>Las células procariotas no tienen núcleo definido ni orgánulos membranosos. Son más simples y pequeñas. Ejemplo: bacterias.</p>
+
+      <h3>Cuadro comparativo: Células animales vs vegetales</h3>
+      <table>
+        <tr>
+          <th>Característica</th>
+          <th>Célula Animal</th>
+          <th>Célula Vegetal</th>
+        </tr>
+        <tr>
+          <td>Pared celular</td>
+          <td>No</td>
+          <td>Sí</td>
+        </tr>
+        <tr>
+          <td>Cloroplastos</td>
+          <td>No</td>
+          <td>Sí</td>
+        </tr>
+        <tr>
+          <td>Vacuolas grandes</td>
+          <td>No</td>
+          <td>Sí</td>
+        </tr>
+        <tr>
+          <td>Forma</td>
+          <td>Irregular</td>
+          <td>Regular (rectangular)</td>
+        </tr>
+      </table>
+    </section>
+
+    <section id="quiz">
+      <h2>Ejercicio tipo Quiz</h2>
+      <div class="quiz-question">
+        <p><strong>1. ¿Cuál de las siguientes estructuras está presente solo en células vegetales?</strong></p>
+        <ul>
+          <li>A. Lisosoma</li>
+          <li>B. Cloroplasto</li>
+          <li>C. Mitocondria</li>
+          <li>D. Ribosoma</li>
+        </ul>
+      </div>
+      <div class="quiz-question">
+        <p><strong>2. ¿Qué orgánulo genera energía en la célula?</strong></p>
+        <ul>
+          <li>A. Aparato de Golgi</li>
+          <li>B. Núcleo</li>
+          <li>C. Mitocondria</li>
+          <li>D. Ribosoma</li>
+        </ul>
+      </div>
+      <div class="quiz-question">
+        <p><strong>3. ¿Cuál es la principal diferencia entre células eucariotas y procariotas?</strong></p>
+        <ul>
+          <li>A. Las procariotas tienen mitocondrias</li>
+          <li>B. Las eucariotas no tienen ADN</li>
+          <li>C. Las eucariotas tienen núcleo definido</li>
+          <li>D. No hay diferencias</li>
+        </ul>
+      </div>
+    </section>
+
+    <footer>
+      <a href="../../index.html">Volver a la Página Principal</a>
+      <a href="../Biologia2do/segundoblg.html">Volver a la página de segundo año</a>
+    </footer>
+  </div>
+
+  <script>
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark-mode");
+    }
+  </script>
+</body>
+</html>
